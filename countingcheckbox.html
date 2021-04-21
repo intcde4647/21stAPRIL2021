@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var number=0;
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                console.log("Checkbox is checked.");
+                number++;
+                $("div")[0].innerHTML=number;
+            }
+            else if($(this).prop("checked") == false){
+                console.log("Checkbox is unchecked.");
+                number--;
+                $("div")[0].innerHTML=number;
+            }
+            });
+          
+        });
+        </script>
+</head>
+<body>
+    <input type="checkbox" id="red" name="colors">Red
+    <input type="checkbox" id="green" name="colors">Green
+    <input type="checkbox" id="blue" name="colors">Blue
+    <input type="checkbox" id="black" name="colors">Black
+</body>
+<div id="message"></div>
+</html>
